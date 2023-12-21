@@ -1,0 +1,11 @@
+{
+  "url": {
+    "url_get_qrcode": "https://passport.bilibili.com/x/passport-login/web/qrcode/generate",
+    "url_check_scan": "https://passport.bilibili.com/x/passport-login/web/qrcode/poll"
+  },
+  "headers": {
+    "user-agent": "Mozilla/5.0",
+    "referer": "https://www.bilibili.com/"
+  },
+  "qrcode_location": "./qrcode.png"
+}
