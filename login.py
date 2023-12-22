@@ -45,7 +45,7 @@ def get_cookie() -> dict:
             time.sleep(2)
         elif result_code == 86038:
             print(data_result['message'], "重新获取中")
-            qrcode_key = utils.save_img(url=url_get_qrcode, headers=headers)
+            qrcode_key = utils.save_img(url=url_get_qrcode, headers=headers, img_location=config['qrcode_location'])
             time.sleep(1)
         elif result_code == 0:
             print("登录成功，获取cookie中")
