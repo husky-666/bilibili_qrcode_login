@@ -1,5 +1,5 @@
 """
-run
+login
 执行一次扫码登录流程
 """
 import utils
@@ -47,6 +47,8 @@ def get_cookie() -> dict:
             print(data_result['message'], "重新获取中")
             qrcode_key = utils.save_img(url=url_get_qrcode, headers=headers, img_location=config['qrcode_location'])
             time.sleep(1)
+            img = Image.open(config['qrcode_location'])
+            show_img.print_qrcode(img=img)
         elif result_code == 0:
             print("登录成功，获取cookie中")
             return result_check_scan['response'].cookies.get_dict()
